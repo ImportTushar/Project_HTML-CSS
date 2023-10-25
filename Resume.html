@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body{
+            margin: 0;
+            padding: 100px;
+
+        }
+
+        .container{
+        background-color: aqua;
+        width: 1min(100vw , 1600px);
+        height: 270vh;
+        box-sizing: border-box;
+        margin: auto;
+        }
+
+
+        .left{
+            display: inline-block;
+            background-color: rgb(8, 8, 8);
+            width: 450px;
+            height: 270vh;
+
+
+        }
+
+        .right{
+            float: right;
+            display: inline-block;
+            width: calc(100% - 450px);
+            height: 270vh;
+            background-image: url(./orion-nebula-11107_1280.jpg );
+            background-repeat: no-repeat;
+            background-size: cover;
+            -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+        }
+
+        img{
+            position: relative;
+            top: 20px;
+            left: 25%;
+            width: 200px;
+            height: 200px;
+            margin-left: 10px;
+            border-radius: 50%;
+            box-shadow: 12px 29px 81px 0px rgba(52, 216, 246, 0.75);
+        }
+
+        .me h1{
+            color: white;
+            position: relative;
+            top: 10px;
+            text-align: center;
+            font-style: bold;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .me p{
+            color: white;
+            position: relative;
+            text-align: center;
+            font-style: italic;
+            font-family: 'roboto';
+            font-size: smaller;
+        }
+
+        .me li{
+            list-style: none;
+        }
+
+        .me a{
+            display: flex;
+            padding-left: 70px;
+            gap: 5px;
+            text-decoration: none;
+            color: white;
+            font-size: 0.7em;
+            padding-top: 20px;
+        }
+
+        .fa-github{
+            float: left;
+            left: -10px;
+            width: 100px;
+        }
+
+        .linked{
+            width: 100px;
+            padding-left: 20px;
+        }
+        
+        #cont{
+            gap: 15px;
+            font-size: small;
+            text-align: center;
+        }
+        
+        #email{
+            gap: 15px;
+            font-size: small;
+            text-align: center;
+        }
+
+        h4{
+            color: white;
+            position: relative;
+            top: 20px;
+            left: 50px;
+            font-family: 'roboto';
+        }
+
+        .progress-bar{
+            position: relative;
+            top: 1em;
+            left: 2em;
+            width: 400px;
+            height: 2em;
+            background-color: gray;
+            border-radius: 1.5em;
+            color: white;   
+        }
+
+        .progress-bar::before {
+            content: attr(data-label);
+            color: white;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            top: .5em;
+            left: .5em;
+            bottom: .5em;
+            width: 50%;
+            min-width: 2rem;
+            max-width: calc(100%-1em);
+            background-color: rgb(174, 0, 255);
+            border-radius: 1em;
+            padding: 0.5em;
+        }
+
+        .progress-bar2{
+            position: relative;
+            top: 1em;
+            left: 2em;
+            width: 400px;
+            height: 2em;
+            background-color: gray;
+            border-radius: 1.5em;
+            color: white;   
+        }
+
+        .progress-bar2::before {
+            content: attr(data-label);
+            color: white;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            top: .5em;
+            left: .5em;
+            bottom: .5em;
+            width: 40%;
+            min-width: 2rem;
+            max-width: calc(100%-1em);
+            background-color: rgb(174, 0, 255);
+            border-radius: 1em;
+            padding: 0.5em;
+        }
+
+        .progress-bar3{
+            position: relative;
+            top: 1em;
+            left: 2em;
+            width: 400px;
+            height: 2em;
+            background-color: gray;
+            border-radius: 1.5em;
+            color: white;   
+        }
+
+        .progress-bar3::before {
+            content: attr(data-label);
+            color: white;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            top: .5em;
+            left: .5em;
+            bottom: .5em;
+            width: 30%;
+            min-width: 2rem;
+            max-width: calc(100%-1em);
+            background-color: rgb(174, 0, 255);
+            border-radius: 1em;
+            padding: 0.5em;
+        }
+
+        .progress-bar4{
+            position: relative;
+            top: 1em;
+            left: 2em;
+            width: 400px;
+            height: 2em;
+            background-color: gray;
+            border-radius: 1.5em;
+            color: white;   
+        }
+
+        .progress-bar4::before {
+            content: attr(data-label);
+            color: white;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            top: .5em;
+            left: .5em;
+            bottom: .5em;
+            width: 80%;
+            min-width: 2rem;
+            max-width: calc(100%-1em);
+            background-color: rgb(174, 0, 255);
+            border-radius: 1em;
+            padding: 0.5em;
+        }
+
+        .progress-bar5{
+            position: relative;
+            top: 1em;
+            left: 2em;
+            width: 400px;
+            height: 2em;
+            background-color: gray;
+            border-radius: 1.5em;
+            color: white;   
+        }
+
+        .progress-bar5::before {
+            content: attr(data-label);
+            color: white;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            top: .5em;
+            left: .5em;
+            bottom: .5em;
+            width: 70%;
+            min-width: 2rem;
+            max-width: calc(100%-1em);
+            background-color: rgb(174, 0, 255);
+            border-radius: 1em;
+            padding: 0.5em;
+        }
+
+        .certificate a{
+            word-spacing:2px;
+            letter-spacing: 1px;
+        }
+
+        .desc h1{
+            color: white;
+            position: relative;
+            top: 10px;
+            text-align: center;
+            font-style: bold;
+            font-family: 'Roboto', sans-serif;
+        }
+
+
+        .desc .obj p{
+            color: white;
+            text-align: center;
+            position: relative;
+            font-style: italic;
+            font-family: 'roboto';
+            font-size: larger;
+        }
+
+
+        .desc p{
+            color: white;
+            position: relative;
+            font-style: italic;
+            font-family: 'roboto';
+            font-size: larger;
+        }
+
+        .exp li{
+            color: white;
+            list-style:none;
+            position: relative;
+            left: 10px;
+            font-size: medium;
+            letter-spacing: 2px;
+        }
+
+        .desc .pio p{
+            text-align: center;
+        }
+
+        .desc .proj li a{
+            list-style: circle;
+            text-decoration: none;
+            color: white;
+            font-size: larger;
+        }
+
+        .desc .proj li .ml{
+            background-color: coral;
+            position: relative;
+            left: 50px;
+            top: 10px;
+            text-align: center;
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 5em;
+        }
+
+        .desc .proj li .web{
+            background-color: coral;
+            position: relative;
+            top: 70px;
+            left: 50px;
+            text-align: center;
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 5em;
+        }
+
+        .education{
+            padding: 50px;
+            padding-top: 100px;
+        }
+
+        @media only screen and (max-width: 760px) {
+        .container {
+        display: flex;
+        flex-direction: column;
+        }
+        .left, .right {
+        width: 100%; 
+        max-width: 100vw;
+        }
+        }
+
+        a:hover{
+            color: rgb(255, 0, 225);
+            position: relative;
+            left: 50px;
+            border-radius: 50%;
+            box-shadow: 
+            0 0 10px #fff,
+                    0 0 21px #fff,
+                    0 0 42px rgb(255, 0, 251),
+                    0 0 82px  rgb(255, 0, 251),
+                    0 0 92px rgb(255, 0, 251),
+                    0 0 102px rgb(255, 0, 251),
+                    0 0 151px rgb(255, 0, 251)  ; 
+        }
+
+        img:hover{
+            color: rgb(255, 0, 225);
+            border-radius: 10em;
+            box-shadow: 
+            0 0 10px #fff,
+                    0 0 21px #fff,
+                    0 0 42px rgb(238, 230, 238),
+                    0 0 82px  rgb(232, 188, 231),
+                    0 0 92px rgb(255, 0, 251),
+                    0 0 102px rgb(255, 0, 251),
+                    0 0 151px rgb(255, 0, 251)  ; 
+        }
+
+        .tar a:hover{
+            padding: 15px;
+
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <div>
+                <div class="me">
+                    <img src="./logo mine new.png" alt="Resume">
+                    <h1> Tushar Giri</h1>
+                    <p>Aspiring enthusiast computer engineer</p>
+                    <ul class="tar">
+                        <li ><a target="_blank" class="fa-brands fa-github"  href="https://github.com/ImportTushar" >ImportTushar</a></li>
+                        <li ><a target="_blank" class="fa-brands fa-linkedin" href="https://www.linkedin.com/in/tushar-giri-871961216/" >linkedin</a></li>
+                    </ul>
+                    <p>---------------------------------------------------------------------------------------------------</p>
+
+                    <h1>CONTACT INFO</h1>
+                    <p>---------------------------------------------------------------------------------------------------</p>
+                    <li><a class="fa fa-phone" id="cont" href="tel:+919021430677" target="_blank">+91 9021430677</a></li>
+                    <li><a class="fa-solid fa-envelope" id="email" href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSKkkLWvBrgSCcgWFHqfZlnvpXDdwDRPmJbldWKZWQrcJZFBXhgCpCSXnXdwSPZgfrfPnnGV" target="_blank">tushargiri9901@gmail.com</a></li>
+
+                    <h1>Skills</h1>
+                    <p>---------------------------------------------------------------------------------------------------</p>
+                    <h4>Microsoft Power BI</h4>
+                    <div class="progress-bar" data-label="50%"></div>
+
+                    <h4>Data Visualization</h4>
+                    <div class="progress-bar2" data-label="40%"></div>
+
+                    <h4>Machine Learning</h4>
+                    <div class="progress-bar3" data-label="30%"></div>
+
+                    <h4>Numpy / Pandas / Sckit-learn / Tensorflow</h4>
+                    <div class="progress-bar2" data-label="40%"></div>
+
+                    <h4>AWS Cloud Computing</h4>
+                    <div class="progress-bar3" data-label="30%"></div>
+
+                    <h4>Core JAVA</h4>
+                    <div class="progress-bar" data-label="50%"></div>
+
+                    <h4>python</h4>
+                    <div class="progress-bar2" data-label="40%"></div>
+
+                    <h4>HTML/HTML5</h4>
+                    <div class="progress-bar4" data-label="80%"></div>
+
+                    <h4>CSS/CSS3</h4>
+                    <div class="progress-bar5" data-label="70%"></div>
+
+                    <h1>Certificates</h1>
+                    <p>---------------------------------------------------------------------------------------------------</p>
+                    <div class="certificate">
+                        <ul>
+                            <li><a class="fa fa-certificate" href="https://drive.google.com/file/d/1JAmDJoiCufglvGXp-hYp5X52ynd7-mg3/view?usp=drive_link" target="_blank">AWS Academy Graduate - AWS Academy Cloud Foundations</a></li>
+                            <li><a class="fa fa-certificate" href="https://drive.google.com/file/d/1UcE_5lYPA-Qpq2mBduPl_CeWFmXC7mHH/view?usp=drive_link" target="_blank">Microsoft Power BI Data Analyst</a></li>
+                            <li><a class="fa fa-certificate" href="https://drive.google.com/file/d/1PIG1MOAXfrs8kL6JZOIxUZlgP7o15iRd/view?usp=drive_link" target="_blank">Machine Learning Training</a></li>
+                            <li><a class="fa fa-certificate" href="https://drive.google.com/file/d/1g5fBzCbuj9UjMPjvmPNuQ2J8nxbZvfN5/view?usp=drive_link" target="_blank">Internship & Job Preparation Training</a></li>
+                            <li><a class="fa fa-certificate" href="https://drive.google.com/file/d/15nyEWE6xqJGN9hCs_DXDrc8-6VQBM-lo/view?usp=sharing" target="_blank">Power BI Virtual Case Experience</a></li>
+                            <li><a class="fa fa-certificate" href="https://drive.google.com/file/d/1Zp56YKf14-GQ9Toz64TLMyoocQevRiK9/view?usp=drive_link" target="_blank">Hadoop Foundations - Level 1</a></li>
+                            <li><a class="fa fa-certificate" href="https://drive.google.com/file/d/1tBB_tmYJkNaeFRSIuH2IwU6pl0BZMkSu/view?usp=drive_link" target="_blank">Data Visualisation: Empowering Business with Effective Insights</a></li>
+                            <li><a class="fa fa-certificate" href="https://drive.google.com/file/d/1CXdXf0PoP4Mxbxnecan_xgewtHK2mULE/view?usp=drive_link" target="_blank">Data Science Virtual Experience Programme</a></li>
+                            <li><a class="fa fa-certificate" href="https://drive.google.com/file/d/1zM7mXb035BQb8Sy-uGNik4Ii-_oj9MQ-/view?usp=drive_link" target="_blank">Spark - Level 1</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="desc">
+                <h1>Objectives</h1>
+                <div class="obj">
+                <p class="obj">-------------------------------------------------------------------------------------------------------------------</p>
+                <p>Passionate professional actively seeking new opportunities to contribute my skills <br>
+                    and expertise to a dynamic team, driving growth and innovation.</p>
+                </div>
+
+                <h1>Work Experience</h1>
+                <div class="pio">
+                <p>-------------------------------------------------------------------------------------------------------------------</p>
+                </div>
+                <div class="exp">
+                    <ul>
+                        <li class='fas fa-arrow-alt-circle-right'>Microsoft Power Bi - From Atos Prayas Foundation Program</li>
+                        <p>Completed Course of Power BI with Few Projects</p>
+
+                        <li class='fas fa-arrow-alt-circle-right'>Machine Learning Training</li>
+                        <p>Created few Machine Learning Projects for Data Exporation and analysis</p>
+
+                        <li class='fas fa-arrow-alt-circle-right'>NumPy</li>
+                        <p>Created few Machine Learning Projects where i used Numpy for Mathmatical Operations</p>
+
+                        <li class='fas fa-arrow-alt-circle-right'>Pandas</li>
+                        <p>Created few Machine Learning Projects where i used Pandas for Data Collection</p>
+
+                        <li class='fas fa-arrow-alt-circle-right'>Sckit-learn</li>
+                        <p>Created few Machine Learning Projects where i used Sckit-learn for Data seperation and Training</p>
+
+                        <li class='fas fa-arrow-alt-circle-right'>HTML/HTML5</li>
+                        <p>Created few Web pages front Projects using HTML and HTML5 Structural development and better SEO experience</p>
+
+                        <li class='fas fa-arrow-alt-circle-right'>CSS/CSS3</li>
+                        <p>Created few Web pages Projects where i used CSS/CSS3 for better featuring and looks of the Webpage</p>
+                    </ul>
+
+                    <h1>Projects</h1>
+                    <div class="pio">
+                    <p>-------------------------------------------------------------------------------------------------------------------</p>
+                    </div>
+                    <div class="proj">
+                        <ul>
+                            <li><a href="https://drive.google.com/drive/folders/1wSUpXZshFg7ZWVhFr0oEM9SeBmPlKBzC?usp=drive_link" class="ml" target="_blank">Pojects Related to Data</a></li>
+                            <li><a href="https://github.com/ImportTushar" class="web" target="_blank">Projects related to web development</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="education">
+                        <h1>Education</h1>
+                        <div class="paio">
+                        <p>-------------------------------------------------------------------------------------------------------------------</p>
+                        </div>
+                        <div class="education">
+                            <ul>
+                                <li class='fas fa-arrow-alt-circle-right'>From 2018 to 2023</li>
+                                <p>Universal College of Engineering  (7.86 CGPA)</p>
+        
+                                <li class='fas fa-arrow-alt-circle-right'>From 2016 to 2018</li>
+                                <p>Sheth VidyaMandir JR College of Science and Commerce ( HSC - 57.86%)</p> 
+                                
+                                <li class='fas fa-arrow-alt-circle-right'>From 2015 to 2016</li>
+                                <p>Mother Mary English High school ( SSC - 65.69%)</p> 
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
